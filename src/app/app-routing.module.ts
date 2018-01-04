@@ -5,6 +5,7 @@ import { UserLoginComponent } from './ui/user-login/user-login.component';
 import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ReadmePageComponent } from './ui/readme-page/readme-page.component';
 import { NotesListComponent } from './notes/notes-list/notes-list.component';
+import { HomeComponent } from './ui/home/home.component';
 
 import { AuthGuard } from './core/auth.guard';
 import { CoreModule } from './core/core.module';
@@ -12,6 +13,7 @@ import { CoreModule } from './core/core.module';
 const routes: Routes = [
   { path: '', component: ReadmePageComponent },
   { path: 'login', component: UserLoginComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'items', component: ItemsListComponent, canActivate: [AuthGuard] },
   { path: 'notes', component: NotesListComponent,  canActivate: [AuthGuard] },
   // uploads are lazy loaded
