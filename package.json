@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "pwa": "ng build --prod && sw-precache --root=dist --config=precache-config.js",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --aot --target=poduction"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +29,7 @@
     "@angular/router": "^5.0.2",
     "angularfire2": "5.0.0-rc.5",
     "core-js": "2.5.1",
+    "express": "^4.16.2",
     "firebase": "4.8.0",
     "rxjs": "^5.5.2",
     "typescript": "~2.4.2",
